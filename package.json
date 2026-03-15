@@ -1,0 +1,23 @@
+{
+  "name": "sonicjs-app-cms",
+  "version": "1.0.0",
+  "description": "SonicJS Deploy Now - Deploy to Cloudflare Workers in one click",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:migrate": "wrangler d1 migrations apply DB --local",
+    "db:migrate:prod": "wrangler d1 migrations apply DB --remote"
+  },
+  "dependencies": {
+    "@sonicjs-cms/core": "^2",
+    "drizzle-orm": "^0.44.0",
+    "hono": "^4.0.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241205.0",
+    "typescript": "^5.3.3",
+    "wrangler": "^4.0.0"
+  }
+}
